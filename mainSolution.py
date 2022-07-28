@@ -8,3 +8,4 @@ data = r.json()
 print(data)
 
 print(data)
+print(data)
