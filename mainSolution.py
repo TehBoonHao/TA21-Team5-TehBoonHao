@@ -6,6 +6,3 @@ r = requests.get(url)
 data = r.json()
 
 print(data)
-
-print(data)
-print(data)
