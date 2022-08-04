@@ -1,8 +1,13 @@
-import requests
+import api,cash_on_hand,overheads, profit_loss
 
-# replace the "demo" apikey below with your own key from https://www.alphavantage.co/support/#api-key
-url = 'https://www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=SGD&apikey'
-r = requests.get(url)
-data = r.json()
+# create a function to run api, cash_on_hand, overheads and profit_loss
+def main():
+    # extract the realtime currency exchange rate from api
+    forex = api.exchange_rate()
+    # the result of overhead, cash_on_hand and profit_loss will convert to SGD
+    overheads.overheadfunction(forex)
+    cash_on_hand.coh_function(forex)
+    profit_loss.profit_loss_function(forex)
 
-print(data)
+# run the function
+main()
