@@ -2,7 +2,7 @@ from pathlib import Path
 import re, csv
 
 
-#Create overhead function with the currency exchange rate
+#Create overhead function with the currency exchange rates
 def overheadfunction(forex):
     #Create path with overhead csv file
     current_overheads = Path.cwd()/"csv_reports"/"overheads-day-90.csv"
